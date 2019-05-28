@@ -60,7 +60,7 @@ top_oceania_wines = reviews.loc[
 
 **对dataframe进行计算操作或者apply一个funtion**
 
-```
+```python
 # 求中位数之类的，直接在后面加这种aggregation的function
 median_points = reviews.points.median()
 # 求unique的country
