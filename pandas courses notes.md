@@ -1,6 +1,6 @@
 **建立新的dataframe，读写文件。**
 
-```
+```python
 import pandas as pd
 fruits = pd.DataFrame([[30, 21]], columns=['Apples', 'Bananas'])
 # [[]]是按行来建立dataframe，{[]}是按列来创建
@@ -19,7 +19,7 @@ animals.to_csv("cows_and_goats.csv")
 
 **取用dataframe中的元素**
 
-```
+```python
 # 取columns
 desc = reviews.description
 # or
@@ -96,7 +96,7 @@ star_ratings = reviews.apply(stars, axis='columns')
 
 **grouping and sorting**
 
-```
+```python
 reviews_written = reviews.groupby('taster_twitter_handle').size()
 # or
 reviews_written = reviews.groupby('taster_twitter_handle').taster_twitter_handle.count()
@@ -120,7 +120,7 @@ country_variety_counts = reviews.groupby(['country', 'variety']).size().sort_val
 
 **Missing Values**
 
-```
+```python
 # 取得数据列的type
 dtype = reviews.points.dtype
 
@@ -144,7 +144,7 @@ reviews.taster_twitter_handle.replace("@kerinokeefe", "@kerino")
 
 **Combining and Renaming**
 
-```
+```python
 # 对column的名字重命名，可以是一个字典object，或者如下创造字典
 renamed = reviews.rename(columns=dict(region_1='region', region_2='locale'))
 
